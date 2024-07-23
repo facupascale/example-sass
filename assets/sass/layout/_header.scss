@@ -1,0 +1,20 @@
+.header {
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-inline: 10px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 2em;
+  }
+}
