@@ -1,3 +1,27 @@
-button {
+@use "../themes/colors";
+@use "../themes/_fonts.scss";
+
+.button {
+  @include align-column;
+  flex-direction: row;
+  width: 100%;
+  height: 50px;
+  margin-block: 5px;
+  appearance: none;
+  border-width: 0px;
+  background-color: colors.$white;
   border-radius: 10px;
+  border: 2px solid colors.$custom-grey;
+  font-family: fonts.$poppins-font;
+}
+
+.button--icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.button--primary {
+  background-color: colors.$primary-green;
+  color: colors.$white;
 }

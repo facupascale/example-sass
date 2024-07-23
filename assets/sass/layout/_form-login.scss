@@ -1,0 +1,75 @@
+@use "../themes/colors";
+
+$form-width: 370px;
+
+@mixin align-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  @include align-column;
+
+  &__title {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}
+
+.form {
+  @include align-column;
+
+  &__container_inputs {
+    @include align-column;
+  }
+
+  &__subcontainer {
+    @include align-column;
+    flex-direction: row;
+    justify-content: space-between;
+    width: $form-width;
+    margin-top: 10px;
+  }
+
+  &__container_checkbox {
+    @include align-column;
+    flex-direction: row;
+  }
+
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid colors.$custom-grey;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__checkbox_label {
+    margin-left: 5px;
+    font-size: 1em;
+  }
+
+  &__link {
+    cursor: pointer;
+    text-decoration: none;
+    color: colors.$black;
+  }
+
+  &__container-buttons {
+    @include align-column;
+    margin-top: 10px;
+  }
+
+  &__footer-text {
+    margin-top: 10px;
+  }
+
+  &__link--register {
+    font-weight: bold;
+  }
+}
